@@ -5,20 +5,26 @@
 #define NUMPIXELS    50
 #define PINNEON      19
 bool neonOnOff ;
+bool debugmode = false;
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PINLED, NEO_GRB + NEO_KHZ800);
 #define DELAYVAL 50
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(115200); 
+  if ( debugmode ) { Serial.println("Setup Begonnen"); }
   pixels.begin();
-
+  if ( debugmode ) { Serial.println("Setup pixels"); }
+  
   pinMode(PINNEON, OUTPUT);
+  if ( debugmode ) { Serial.println("setup Neonpin"); }
   neonOnOff = false;
 }  
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if ( debugmode ) { Serial.println("Start rondje"); }
   pixels.clear();
 
   for(int i=0; i<NUMPIXELS; i++) {
@@ -32,8 +38,11 @@ void loop() {
   }
   delay(2000);
   if ( neonOnOff ) {
-    digitalWrite(PINNEON, HIGH ); }
+    digitalWrite(PINNEON, HIGH ); 
+    neonOnOff = not(neonOnOff);
+  }
   else
   { digitalWrite(PINNEON, LOW );
+    neonOnOff = not(neonOnOff);
    }
 }
