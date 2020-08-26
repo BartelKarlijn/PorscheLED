@@ -1,17 +1,21 @@
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 
-#define PIN        6
-#define NUMPIXELS 50
+#define PINLED        5
+#define NUMPIXELS    50
+#define PINNEON      19
+bool neonOnOff ;
 
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel pixels(NUMPIXELS, PINLED, NEO_GRB + NEO_KHZ800);
 #define DELAYVAL 50
 
 void setup() {
   // put your setup code here, to run once:
   pixels.begin();
 
-}
+  pinMode(PINNEON, OUTPUT);
+  neonOnOff = false;
+}  
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -26,4 +30,10 @@ void loop() {
     pixels.show();
     delay(DELAYVAL);
   }
+  delay(2000);
+  if ( neonOnOff ) {
+    digitalWrite(PINNEON, HIGH ); }
+  else
+  { digitalWrite(PINNEON, LOW );
+   }
 }
