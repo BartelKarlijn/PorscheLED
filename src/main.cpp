@@ -36,7 +36,6 @@ void loop() {
     pixels.show();
     delay(DELAYVAL);
   }
-  delay(2000);
   if ( neonOnOff ) {
     digitalWrite(PINNEON, HIGH ); 
     neonOnOff = not(neonOnOff);
@@ -45,4 +44,11 @@ void loop() {
   { digitalWrite(PINNEON, LOW );
     neonOnOff = not(neonOnOff);
    }
+ for(int i=0; i<NUMPIXELS; i++) {
+
+    pixels.setPixelColor(i, pixels.Color(150, 150, 150));
+  }
+    pixels.show();
+    delay(DELAYVAL * NUMPIXELS);
+  
 }
