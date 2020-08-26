@@ -5,7 +5,7 @@
 #define NUMPIXELS    50
 #define PINNEON      19
 bool neonOnOff ;
-bool debugmode = false;
+bool debugmode = true;
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PINLED, NEO_GRB + NEO_KHZ800);
 #define DELAYVAL 50
