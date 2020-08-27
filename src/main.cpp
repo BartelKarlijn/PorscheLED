@@ -2,10 +2,11 @@
 #include <Adafruit_NeoPixel.h>
 
 #define PINLED        5
-#define NUMPIXELS    50
+#define NUMPIXELS    53
 #define PINNEON      19
 bool neonOnOff ;
 bool debugmode = true;
+int maxval = 30 ;
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PINLED, NEO_GRB + NEO_KHZ800);
 #define DELAYVAL 50
@@ -29,9 +30,9 @@ void loop() {
 
   for(int i=0; i<NUMPIXELS; i++) {
 
-    pixels.setPixelColor(i, pixels.Color(0, 150, 0));
-    pixels.setPixelColor(i-1, pixels.Color(150, 0, 0));
-    pixels.setPixelColor(i-2, pixels.Color(0, 0, 150));
+    pixels.setPixelColor(i, pixels.Color(0, maxval, 0));
+    pixels.setPixelColor(i-1, pixels.Color(maxval, 0, 0));
+    pixels.setPixelColor(i-2, pixels.Color(0, 0, maxval));
     pixels.setPixelColor(i-3, pixels.Color(0, 0, 0));
     pixels.show();
     delay(DELAYVAL);
@@ -46,7 +47,7 @@ void loop() {
    }
  for(int i=0; i<NUMPIXELS; i++) {
 
-    pixels.setPixelColor(i, pixels.Color(150, 150, 150));
+    pixels.setPixelColor(i, pixels.Color(maxval, maxval, maxval));
   }
     pixels.show();
     delay(DELAYVAL * NUMPIXELS);
