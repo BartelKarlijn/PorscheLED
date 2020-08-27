@@ -17,7 +17,7 @@ void setup() {
   if ( debugmode ) { Serial.println("Setup Begonnen"); }
   pixels.begin();
   if ( debugmode ) { Serial.println("Setup pixels"); }
-  
+  à
   pinMode(PINNEON, OUTPUT);
   if ( debugmode ) { Serial.println("setup Neonpin"); }
   neonOnOff = false;
