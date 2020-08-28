@@ -10,6 +10,9 @@
 #include <wifi/handle.h>
 #include <wifi/setupwifi.h>
 #include <pixels/pixeldefine.h>
+#include <pixels/drl.h>
+//#include <pixels/dim.h>
+#include <pixels/showpixels.h>
 #include <main/setuppins.h>
 
 void setup() {
@@ -20,9 +23,14 @@ void setup() {
 
 void loop() {
   server.handleClient();
+  drl();
+  //dim();
+  showpixels();
+
 }
 
 void loopori() {
+  server.handleClient();
   // put your main code here, to run repeatedly:
   printdebug("Start rondje");
   pixels.clear();

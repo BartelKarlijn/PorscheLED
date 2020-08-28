@@ -7,4 +7,8 @@ void setuppins() {
   pinMode(PINNEON, OUTPUT);
   printdebug("setup Neonpin");
   neonOnOff = false;
+
+  // Zet alle pixels af
+  pixels.clear();
+  pixels.show();
 }

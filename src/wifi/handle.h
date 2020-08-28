@@ -6,6 +6,7 @@ void handle_OnConnect() {
 void handle_drl() {
   printdebug("handle_drl");
   drl_status = not(drl_status);
+  statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
 void handle_dim() {
