@@ -6,10 +6,12 @@ void setupwifi() {
   delay(100);
 
   server.on("/",        handle_OnConnect);
-  server.on("/but1on",  handle_but1on);
-  server.on("/but1off", handle_but1off);
-  server.on("/but2on",  handle_but2on);
-  server.on("/but2off", handle_but2off);
+  server.on("/butdrl",  handle_drl);
+  server.on("/butdim",  handle_dim);
+  server.on("/butstop", handle_stop);
+  server.on("/butleft", handle_left);
+  server.on("/butrigh", handle_righ);
+
   server.onNotFound    (handle_NotFound);
 
   server.begin();

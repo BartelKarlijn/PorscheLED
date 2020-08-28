@@ -1,29 +1,36 @@
 
 void handle_OnConnect() {
   printdebug("handle_OnConnect");
-  server.send(200, "text/html", SendHTML(BUT1status,BUT2status)); 
+  server.send(200, "text/html", SendHTML()); 
 }
-void handle_but1on() {
-  BUT1status = HIGH;
-  printdebug("handle_but1on");
-  server.send(200, "text/html", SendHTML(true,BUT1status)); 
+void handle_drl() {
+  printdebug("handle_drl");
+  drl_status = not(drl_status);
+  server.send(200, "text/html", SendHTML()); 
 }
-void handle_but1off() {
-  BUT1status = LOW;
-  printdebug("handle_but1off");
-  server.send(200, "text/html", SendHTML(true,BUT1status)); 
+void handle_dim() {
+  printdebug("handle_dim");
+  dim_status = not(dim_status);
+  server.send(200, "text/html", SendHTML()); 
 }
-void handle_but2on() {
-  BUT1status = HIGH;
-  printdebug("handle_but2on");
-  server.send(200, "text/html", SendHTML(true,BUT2status)); 
+void handle_stop() {
+  printdebug("handle_stop");
+  stop_status = not(stop_status);
+  server.send(200, "text/html", SendHTML()); 
 }
-void handle_but2off() {
-  BUT1status = LOW;
-  printdebug("handle_but2on");
-  server.send(200, "text/html", SendHTML(true,BUT2status)); 
+void handle_left() {
+  printdebug("handle_left");
+  left_status = not(left_status);
+  server.send(200, "text/html", SendHTML()); 
 }
+void handle_righ() {
+  printdebug("handle_righ");
+  righ_status = not(righ_status);
+  server.send(200, "text/html", SendHTML()); 
+}
+
 void handle_NotFound(){
   printdebug("handle_NotFound");
   server.send(404, "text/plain", "Not found");
 }
+

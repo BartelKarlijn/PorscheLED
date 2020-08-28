@@ -5,6 +5,7 @@
 // van code zelf
 #include <main/printdebug.h>
 #include <wifi/wifidefinitions.h>
+#include <wifi/htmlbutton.h>
 #include <wifi/sendhtml.h>
 #include <wifi/handle.h>
 #include <wifi/setupwifi.h>
