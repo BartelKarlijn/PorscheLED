@@ -14,10 +14,12 @@
 //#include <pixels/dim.h>
 #include <pixels/showpixels.h>
 #include <main/setuppins.h>
+#include <main/setupleds.h>
 
 void setup() {
   // put your setup code here, to run once:
   setuppins();
+  setupleds();
   setupwifi();
 }  
 
