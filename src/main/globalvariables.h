@@ -1,6 +1,12 @@
 bool neonOnOff ;
 bool statuschanged = false;
 
+//kleuren
+int colorwit[3] = {maxval /3, maxval/3, maxval/3};
+int colorred[3] = {maxval /3,        0,        0};
+int colorang[3] = {maxval /3,        0, maxval/3};
+int coloroff[3] = {        0,        0,        0};
+
 // voor webpagina
 bool drl_status = false;
 bool drl_statusold = false;

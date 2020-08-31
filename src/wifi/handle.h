@@ -1,6 +1,7 @@
 
 void handle_OnConnect() {
   printdebug("handle_OnConnect");
+  statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
 void handle_drl() {
@@ -12,21 +13,25 @@ void handle_drl() {
 void handle_dim() {
   printdebug("handle_dim");
   dim_status = not(dim_status);
+  statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
 void handle_stop() {
   printdebug("handle_stop");
   stop_status = not(stop_status);
+  statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
 void handle_left() {
   printdebug("handle_left");
   left_status = not(left_status);
+  statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
 void handle_righ() {
   printdebug("handle_righ");
   righ_status = not(righ_status);
+  statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
 

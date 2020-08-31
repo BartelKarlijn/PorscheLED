@@ -36,4 +36,13 @@ void setupleds() {
   *pointer9v = *pointer8t + 1;
   *pointer9t = *pointer9v + *pointer9n - 1;
 
+  printdebug( "drl_voor van l" + (String) drl_voor_l[0] + " tot " + (String) drl_voor_l[0] );
+  printdebug( "drl_voor van r" + (String) drl_voor_r[0] + " tot " + (String) drl_voor_r[0] );
+  printdebug( "drl_acht van l" + (String) drl_voor_l[0] + " tot " + (String) drl_acht_l[0] );
+  printdebug( "drl_acht van r" + (String) drl_acht_r[0] + " tot " + (String) drl_acht_r[0] );
+  printdebug( "mainrond van l" + (String) mainrond_l[0] + " tot " + (String) mainrond_l[0] );
+  printdebug( "mainrond van r" + (String) mainrond_r[0] + " tot " + (String) mainrond_r[0] );
+  printdebug( "mainacht van l" + (String) mainacht_l[0] + " tot " + (String) mainacht_l[0] );
+  printdebug( "mainacht van r" + (String) mainacht_r[0] + " tot " + (String) mainacht_r[0] );
+  printdebug( "stopachter van" + (String) stopachter[0] + " tot " + (String) stopachter[0] );
 }

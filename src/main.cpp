@@ -10,8 +10,10 @@
 #include <wifi/handle.h>
 #include <wifi/setupwifi.h>
 #include <pixels/pixeldefine.h>
-#include <pixels/drl.h>
-//#include <pixels/dim.h>
+#include <pixels/setcolor.h>
+#include <pixels/pixeldrl.h>
+#include <pixels/pixeldim.h>
+#include <pixels/pixelstop.h>
 #include <pixels/showpixels.h>
 #include <main/setuppins.h>
 #include <main/setupleds.h>
@@ -25,8 +27,9 @@ void setup() {
 
 void loop() {
   server.handleClient();
-  drl();
-  //dim();
+  pixeldrl();
+  pixeldim();
+  pixelstop();
   showpixels();
 
 }
