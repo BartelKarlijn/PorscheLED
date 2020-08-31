@@ -6,14 +6,14 @@ void pixeldim() {
       setcolor(mainrond_l, colorwit);
       setcolor(mainrond_r, colorwit);
       setcolor(mainacht_l, colorred);
-      setcolor(mainacht_l, colorred);
+      setcolor(mainacht_r, colorred);
       printdebug("dim status = aan");
     } 
     else {
       setcolor(mainrond_l, coloroff);
       setcolor(mainrond_r, coloroff);
       setcolor(mainacht_l, coloroff);
-      setcolor(mainacht_l, coloroff);
+      setcolor(mainacht_r, coloroff);
       printdebug("dim status = af");
     }
   }

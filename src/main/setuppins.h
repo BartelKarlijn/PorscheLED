@@ -11,4 +11,9 @@ void setuppins() {
   // Zet alle pixels af
   pixels.clear();
   pixels.show();
+
+  millis_next_led   = millis();
+  millis_next_onoff = millis();
+  millis_current    = millis();
+  
 }

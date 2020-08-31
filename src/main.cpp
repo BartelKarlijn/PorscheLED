@@ -14,6 +14,7 @@
 #include <pixels/pixeldrl.h>
 #include <pixels/pixeldim.h>
 #include <pixels/pixelstop.h>
+#include <pixels/pixelpinkers.h>
 #include <pixels/showpixels.h>
 #include <main/setuppins.h>
 #include <main/setupleds.h>
@@ -30,8 +31,8 @@ void loop() {
   pixeldrl();
   pixeldim();
   pixelstop();
+  pixelpinkers();
   showpixels();
-
 }
 
 void loopori() {

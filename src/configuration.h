@@ -5,7 +5,7 @@
 #define DELAYVAL 50
 
 // lichtsterkte
-int maxval = 90 ;
+int maxval = 60 ;
 
 // Debug
 #define debugmode  true
@@ -21,6 +21,14 @@ int maxval = 90 ;
 #define mainacht_num   10
 #define stopacht_num    3
 
+#define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x dezetijd
+
+//kleuren
+int colorwit[3] = {maxval /3, maxval/3, maxval/3};
+int colorred[3] = {maxval /3,        0,        0};
+int colorang[3] = {        0,        0, maxval/3};
+int coloroff[3] = {        0,        0,        0};
+
 int drl_voor_l[3] ;           // 0=van, 1=tot, 2=num
 int drl_voor_r[3] ;           // 0=van, 1=tot, 2=num
 int mainrond_l[3] ;           // 0=van, 1=tot, 2=num
@@ -33,37 +41,37 @@ int stopachter[3] ;           // 0=van, 1=tot, 2=num
 
 // pointers om volgorde aan te geven.  pointer1 = 1e stuk vd led strip
 // helaas weet ik niet hoe je naar array pointers kan wijzen
-int *pointer1v = &drl_voor_l[0];
-int *pointer1t = &drl_voor_l[1];
-int *pointer1n = &drl_voor_l[2];
+int *pointer1v = &mainacht_l[0];
+int *pointer1t = &mainacht_l[1];
+int *pointer1n = &mainacht_l[2];
 
-int *pointer2v = &drl_voor_r[0];
-int *pointer2t = &drl_voor_r[1];
-int *pointer2n = &drl_voor_r[2];
+int *pointer2v = &mainrond_r[0];
+int *pointer2t = &mainrond_r[1];
+int *pointer2n = &mainrond_r[2];
 
-int *pointer3v = &mainrond_l[0];
-int *pointer3t = &mainrond_l[1];
-int *pointer3n = &mainrond_l[2];
+int *pointer3v = &drl_voor_l[0];
+int *pointer3t = &drl_voor_l[1];
+int *pointer3n = &drl_voor_l[2];
 
-int *pointer4v = &mainrond_r[0];
-int *pointer4t = &mainrond_r[1];
-int *pointer4n = &mainrond_r[2];
+int *pointer4v = &drl_voor_r[0];
+int *pointer4t = &drl_voor_r[1];
+int *pointer4n = &drl_voor_r[2];
 
-int *pointer5v = &drl_acht_l[0];
-int *pointer5t = &drl_acht_l[1];
-int *pointer5n = &drl_acht_l[2];
+int *pointer5v = &mainacht_r[0];
+int *pointer5t = &mainacht_r[1];
+int *pointer5n = &mainacht_r[2];
 
 int *pointer6v = &drl_acht_r[0];
 int *pointer6t = &drl_acht_r[1];
 int *pointer6n = &drl_acht_r[2];
 
-int *pointer7v = &mainacht_l[0];
-int *pointer7t = &mainacht_l[1];
-int *pointer7n = &mainacht_l[2];
+int *pointer7v = &mainrond_l[0];
+int *pointer7t = &mainrond_l[1];
+int *pointer7n = &mainrond_l[2];
 
-int *pointer8v = &mainacht_r[0];
-int *pointer8t = &mainacht_r[1];
-int *pointer8n = &mainacht_r[2];
+int *pointer8v = &drl_acht_l[0];
+int *pointer8t = &drl_acht_l[1];
+int *pointer8n = &drl_acht_l[2];
 
 int *pointer9v = &stopachter[0];
 int *pointer9t = &stopachter[1];

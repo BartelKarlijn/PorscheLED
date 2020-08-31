@@ -25,13 +25,13 @@ void handle_stop() {
 void handle_left() {
   printdebug("handle_left");
   left_status = not(left_status);
-  statuschanged = true;
+  // geen statuschanged: in pinkers routine zelf
   server.send(200, "text/html", SendHTML()); 
 }
 void handle_righ() {
   printdebug("handle_righ");
   righ_status = not(righ_status);
-  statuschanged = true;
+  // geen statuschanged: in pinkers routine zelf
   server.send(200, "text/html", SendHTML()); 
 }
 

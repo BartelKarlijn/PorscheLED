@@ -1,12 +1,6 @@
 bool neonOnOff ;
 bool statuschanged = false;
 
-//kleuren
-int colorwit[3] = {maxval /3, maxval/3, maxval/3};
-int colorred[3] = {maxval /3,        0,        0};
-int colorang[3] = {maxval /3,        0, maxval/3};
-int coloroff[3] = {        0,        0,        0};
-
 // voor webpagina
 bool drl_status = false;
 bool drl_statusold = false;
@@ -32,3 +26,10 @@ bool righ_status = false;
 bool righ_statusold = false;
 #define righ_oms  "RichtingAW R"
 #define righ_handle "butrigh"
+
+unsigned long millis_next_led;
+unsigned long millis_next_onoff;
+unsigned long millis_current;
+bool pinkerstatus = false;    // pinkers staan af
+int nextled_left;
+int nextled_righ;
