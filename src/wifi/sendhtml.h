@@ -25,6 +25,7 @@ String SendHTML(){
   ptr +=htmlbutton(stop_status, stop_oms, stop_handle);
   ptr +=htmlbutton(left_status, left_oms, left_handle);
   ptr +=htmlbutton(righ_status, righ_oms, righ_handle);
+  ptr +=htmlbutton(test_status, test_oms, test_handle);
 
   ptr +="</body>\n";
   ptr +="</html>\n";

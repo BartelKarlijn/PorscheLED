@@ -11,6 +11,7 @@ void setupwifi() {
   server.on("/butstop", handle_stop);
   server.on("/butleft", handle_left);
   server.on("/butrigh", handle_righ);
+  server.on("/buttest", handle_test);
 
   server.onNotFound    (handle_NotFound);
 

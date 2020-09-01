@@ -10,18 +10,20 @@ void pixelpinkers() {
 
       if (pinkerstatus) {
         // pinkers nu aan
-        if ( left_status ) { setcolor(mainacht_l, colorang, CRGB::OrangeRed); }  //wel eerst checken of pinker aan die kant aan staat
-        if ( righ_status ) { setcolor(mainacht_r, colorang, CRGB::OrangeRed); }  // anders laten we gewoon dim staan
+        if ( left_status ) { setcolor(mainacht_l, CRGB::OrangeRed); }  //wel eerst checken of pinker aan die kant aan staat
+        if ( righ_status ) { setcolor(mainacht_r, CRGB::OrangeRed); }  // anders laten we gewoon dim staan
       }
       else {
         // pinkers nu af
-        if ( left_status ) { setcolor(mainacht_l, coloroff, CRGB::Black); }
-        if ( righ_status ) { setcolor(mainacht_r, coloroff, CRGB::Black); }
+        if ( left_status ) { setcolor(mainacht_l, CRGB::Black); }
+        if ( righ_status ) { setcolor(mainacht_r, CRGB::Black); }
       }
     }
   }
   if ( (left_status != left_statusold) or (righ_status != righ_statusold) ) {
     // Als er wijziging in pinkers is: terug naar gewone dim
+    printdebug("left_status=" + (String) left_status + " righ_status=" + (String) righ_status);
+    printdebug("dimstatus=" + (String) dim_status);
     left_statusold = left_status;
     righ_statusold = righ_status;
     dim_statusold = not(dim_status);   // Zorg dat we weer gewone dimlichten hebben

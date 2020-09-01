@@ -27,6 +27,11 @@ bool righ_statusold = false;
 #define righ_oms  "RichtingAW R"
 #define righ_handle "butrigh"
 
+bool test_status = false;
+bool test_statusold = false;
+#define test_oms  "TestStrip"
+#define test_handle "buttest"
+
 unsigned long millis_next_led;
 unsigned long millis_next_onoff;
 unsigned long millis_current;

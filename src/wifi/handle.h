@@ -34,7 +34,12 @@ void handle_righ() {
   // geen statuschanged: in pinkers routine zelf
   server.send(200, "text/html", SendHTML()); 
 }
-
+void handle_test(){
+  printdebug("handle_test");
+  test_status = not(test_status);
+  // geen statuschanged: in pinkers routine zelf
+  server.send(200, "text/html", SendHTML()); 
+}
 void handle_NotFound(){
   printdebug("handle_NotFound");
   server.send(404, "text/plain", "Not found");

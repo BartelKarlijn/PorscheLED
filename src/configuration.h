@@ -23,11 +23,6 @@ int maxbrightness = 60 ;
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x dezetijd
 
-byte colorwit[3] = {maxbrightness, maxbrightness, maxbrightness};
-byte colorred[3] = {maxbrightness,             0,             0};
-byte colorang[3] = {            0,             0, maxbrightness};
-byte coloroff[3] = {            0,             0,             0};
-
 int drl_voor_l[3] ;           // 0=van, 1=tot, 2=num
 int drl_voor_r[3] ;           // 0=van, 1=tot, 2=num
 int mainrond_l[3] ;           // 0=van, 1=tot, 2=num
