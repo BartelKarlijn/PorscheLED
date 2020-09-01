@@ -3,11 +3,11 @@ void pixelstop() {
     stop_statusold = stop_status;
     // only when changed
     if(stop_status) {
-      setcolor(stopachter, colorred);
+      setcolor(stopachter, colorred, CRGB::Red);
       printdebug("stop status = aan");
     } 
     else {
-      setcolor(stopachter, coloroff);
+      setcolor(stopachter, coloroff, CRGB::Red);
       printdebug("stop status = af");
     }
   }

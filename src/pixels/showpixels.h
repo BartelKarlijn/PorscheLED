@@ -1,6 +1,6 @@
 void showpixels() {
     if (statuschanged) {
-      pixels.show();
+      FastLED.show();
       statuschanged = false;
     }
 }

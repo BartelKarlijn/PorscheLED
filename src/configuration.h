@@ -1,11 +1,10 @@
 // Configuration file
-#define PINNEON      19
 
 // hoe lang wachten per kleur
 #define DELAYVAL 50
 
 // lichtsterkte
-int maxval = 60 ;
+int maxbrightness = 60 ;
 
 // Debug
 #define debugmode  true
@@ -13,6 +12,7 @@ int maxval = 60 ;
 
 // PinDefinitions
 #define PINLED        5
+#define PINNEON      18
 
 // aantalpixels
 #define drl_voor_num    4
@@ -23,11 +23,10 @@ int maxval = 60 ;
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x dezetijd
 
-//kleuren
-int colorwit[3] = {maxval /3, maxval/3, maxval/3};
-int colorred[3] = {maxval /3,        0,        0};
-int colorang[3] = {        0,        0, maxval/3};
-int coloroff[3] = {        0,        0,        0};
+byte colorwit[3] = {maxbrightness, maxbrightness, maxbrightness};
+byte colorred[3] = {maxbrightness,             0,             0};
+byte colorang[3] = {            0,             0, maxbrightness};
+byte coloroff[3] = {            0,             0,             0};
 
 int drl_voor_l[3] ;           // 0=van, 1=tot, 2=num
 int drl_voor_r[3] ;           // 0=van, 1=tot, 2=num

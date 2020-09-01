@@ -10,13 +10,13 @@ void pixelpinkers() {
 
       if (pinkerstatus) {
         // pinkers nu aan
-        if ( left_status ) { setcolor(mainacht_l, colorang); }  //wel eerst checken of pinker aan die kant aan staat
-        if ( righ_status ) { setcolor(mainacht_r, colorang); }  // anders laten we gewoon dim staan
+        if ( left_status ) { setcolor(mainacht_l, colorang, CRGB::OrangeRed); }  //wel eerst checken of pinker aan die kant aan staat
+        if ( righ_status ) { setcolor(mainacht_r, colorang, CRGB::OrangeRed); }  // anders laten we gewoon dim staan
       }
       else {
         // pinkers nu af
-        if ( left_status ) { setcolor(mainacht_l, coloroff); }
-        if ( righ_status ) { setcolor(mainacht_r, coloroff); }
+        if ( left_status ) { setcolor(mainacht_l, coloroff, CRGB::Black); }
+        if ( righ_status ) { setcolor(mainacht_r, coloroff, CRGB::Black); }
       }
     }
   }
