@@ -12,7 +12,7 @@ int maxbrightness = 60 ;
 
 // PinDefinitions
 #define PINLED        5
-#define PINNEON      18
+#define PINNEON      19
 
 // aantalpixels
 #define drl_voor_num    4
