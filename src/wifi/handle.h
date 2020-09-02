@@ -37,6 +37,7 @@ void handle_righ() {
 void handle_test(){
   printdebug("handle_test");
   test_status = not(test_status);
+  statuschanged = true;
   // geen statuschanged: in pinkers routine zelf
   server.send(200, "text/html", SendHTML()); 
 }

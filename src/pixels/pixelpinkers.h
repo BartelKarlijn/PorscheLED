@@ -7,6 +7,7 @@ void pixelpinkers() {
       pinkerstatus = not(pinkerstatus);
       statuschanged = true;
       millis_next_onoff = millis_current + mainacht_num * pinkerledmillis;
+      nextled = 0;    // bij begin van een sequentie is volgend lichtje het eerste
 
       if (pinkerstatus) {
         // pinkers nu aan

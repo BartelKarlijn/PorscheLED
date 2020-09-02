@@ -36,5 +36,6 @@ unsigned long millis_next_led;
 unsigned long millis_next_onoff;
 unsigned long millis_current;
 bool pinkerstatus = false;    // pinkers staan af
-int nextled_left;
-int nextled_righ;
+byte nextled;
+byte nextled_left;
+byte nextled_righ;
