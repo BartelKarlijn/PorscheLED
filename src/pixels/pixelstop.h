@@ -7,7 +7,7 @@ void pixelstop() {
       printdebug("stop status = aan");
     } 
     else {
-      setcolor(stopachter, CRGB::Red);
+      setcolor(stopachter, CRGB::Black);
       printdebug("stop status = af");
     }
   }
