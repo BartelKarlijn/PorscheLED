@@ -14,7 +14,8 @@ void loop() {
   pixeldrl();
   pixeldim();
   pixelstop();
-  pixelpinkers();
+  //pixelpinkers();
+  pixelpinkersweep();
   pixeltest();
   showpixels();
 }
