@@ -21,6 +21,10 @@ int maxbrightness = 60 ;
 #define mainacht_num   10
 #define stopacht_num    3
 
+// Vermogen pixelstrip
+#define power_max_volt 5
+#define power_max_mA 700
+
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x dezetijd
 
 int drl_voor_l[3] ;           // 0=van, 1=tot, 2=num

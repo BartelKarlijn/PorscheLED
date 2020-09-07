@@ -14,7 +14,7 @@ void setuppins() {
   FastLED.setBrightness(maxbrightness);
 
   // limit my draw to 1A at 5v of power draw
-  FastLED.setMaxPowerInVoltsAndMilliamps(5,700); 
+  FastLED.setMaxPowerInVoltsAndMilliamps(power_max_volt,power_max_mA); 
   
   millis_next_led   = millis();
   millis_next_onoff = millis();
