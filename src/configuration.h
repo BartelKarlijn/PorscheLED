@@ -3,8 +3,6 @@
 // hoe lang wachten per kleur
 #define DELAYVAL 50
 
-// lichtsterkte
-int maxbrightness = 60 ;
 
 // Debug
 #define debugmode  true
@@ -24,8 +22,9 @@ int maxbrightness = 60 ;
 // Vermogen pixelstrip
 #define power_max_volt 5
 #define power_max_mA 700
+#define maxbrightness 60
 
-#define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x dezetijd
+#define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x deze totale pinkertijd
 
 int drl_voor_l[3] ;           // 0=van, 1=tot, 2=num
 int drl_voor_r[3] ;           // 0=van, 1=tot, 2=num
