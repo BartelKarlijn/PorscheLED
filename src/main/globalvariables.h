@@ -40,5 +40,6 @@ unsigned long millis_next_onoff;
 unsigned long millis_current;
 bool pinkerstatus = false;    // pinkers staan af
 byte nextled;
-byte nextled_left;
-byte nextled_righ;
+byte pinkerstuk_l[3];  // 0=van, 1=tot, 2=num
+byte pinkerstuk_r[3];  // 0=van, 1=tot, 2=num
+

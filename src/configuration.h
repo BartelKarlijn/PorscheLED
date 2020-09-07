@@ -38,9 +38,9 @@ byte stopachter[3] ;           // 0=van, 1=tot, 2=num
 
 // pointers om volgorde aan te geven.  pointer1 = 1e stuk vd led strip
 // helaas weet ik niet hoe je naar array pointers kan wijzen
-byte *pointer1v = &mainacht_l[0];
-byte *pointer1t = &mainacht_l[1];
-byte *pointer1n = &mainacht_l[2];
+byte *pointer1v = &mainacht_r[0];
+byte *pointer1t = &mainacht_r[1];
+byte *pointer1n = &mainacht_r[2];
 
 byte *pointer2v = &mainrond_r[0];
 byte *pointer2t = &mainrond_r[1];
@@ -58,9 +58,9 @@ byte *pointer5v = &drl_acht_l[0];
 byte *pointer5t = &drl_acht_l[1];
 byte *pointer5n = &drl_acht_l[2];
 
-byte *pointer6v = &mainacht_r[0];
-byte *pointer6t = &mainacht_r[1];
-byte *pointer6n = &mainacht_r[2];
+byte *pointer6v = &mainacht_l[0];
+byte *pointer6t = &mainacht_l[1];
+byte *pointer6n = &mainacht_l[2];
 
 byte *pointer7v = &drl_acht_r[0];
 byte *pointer7t = &drl_acht_r[1];

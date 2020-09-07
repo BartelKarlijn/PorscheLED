@@ -12,8 +12,11 @@ void pixeldim() {
     else {
       setcolor(mainrond_l, CRGB::Black);
       setcolor(mainrond_r, CRGB::Black);
-      setcolor(mainacht_l, CRGB::Black);
-      setcolor(mainacht_r, CRGB::Black);
+      if (not(stop_status)) {
+        // enkel als geen stoplicht
+        setcolor(mainacht_l, CRGB::Black);
+        setcolor(mainacht_r, CRGB::Black);
+      }
       printdebug("dim status = af");
     }
   }
