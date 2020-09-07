@@ -1,3 +1,6 @@
+// Hoeveel pixels in de strip?
+#define NUMPIXELS      ( 2 * ( drl_voor_num + drl_acht_num + mainrond_num + mainacht_num ) + stopacht_num )
+
 bool neonOnOff ;
 bool statuschanged = false;
 

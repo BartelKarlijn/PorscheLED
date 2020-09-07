@@ -4,6 +4,10 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
+//Configuratie
+#include <configuration.h>
+#include <main/globalvariables.h>
+
 // define
 #include <main/arraydefine.h>
 

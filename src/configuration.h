@@ -71,5 +71,3 @@ int *pointer9v = &stopachter[0];
 int *pointer9t = &stopachter[1];
 int *pointer9n = &stopachter[2];
 
-// berekening, blijf hier af
-#define NUMPIXELS      ( 2 * ( drl_voor_num + drl_acht_num + mainrond_num + mainacht_num ) + stopacht_num )
