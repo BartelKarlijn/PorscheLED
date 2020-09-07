@@ -54,17 +54,17 @@ byte *pointer4v = &drl_voor_r[0];
 byte *pointer4t = &drl_voor_r[1];
 byte *pointer4n = &drl_voor_r[2];
 
-byte *pointer5v = &drl_acht_r[0];
-byte *pointer5t = &drl_acht_r[1];
-byte *pointer5n = &drl_acht_r[2];
+byte *pointer5v = &drl_acht_l[0];
+byte *pointer5t = &drl_acht_l[1];
+byte *pointer5n = &drl_acht_l[2];
 
 byte *pointer6v = &mainacht_r[0];
 byte *pointer6t = &mainacht_r[1];
 byte *pointer6n = &mainacht_r[2];
 
-byte *pointer7v = &drl_acht_l[0];
-byte *pointer7t = &drl_acht_l[1];
-byte *pointer7n = &drl_acht_l[2];
+byte *pointer7v = &drl_acht_r[0];
+byte *pointer7t = &drl_acht_r[1];
+byte *pointer7n = &drl_acht_r[2];
 
 byte *pointer8v = &mainrond_l[0];
 byte *pointer8t = &mainrond_l[1];
