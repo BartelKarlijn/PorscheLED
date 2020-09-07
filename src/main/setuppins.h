@@ -1,12 +1,12 @@
 void setuppins() {
   Serial.begin(serialspeed); 
-  printdebug("Setup Begonnen"); 
+  printdebug("Setup Begonnen, nu de rest nog"); 
 
   pinMode(PINNEON, OUTPUT);
   neonOnOff = false;
 
   // Define the array of leds
-  printdebug("Aantal pixels = " + NUMPIXELS);
+  printdebug("Aantal pixels = " + (String) NUMPIXELS);
   FastLED.addLeds<NEOPIXEL, PINLED>(leds, NUMPIXELS); 
   // set all LEDs to black
   FastLED.clear();
