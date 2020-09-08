@@ -22,7 +22,6 @@
 #include <pixels/pixeldrl.h>
 #include <pixels/pixeldim.h>
 #include <pixels/pixelstop.h>
-//#include <pixels/pixelpinkers.h>
 #include <pixels/pixelpinkersweep.h>
 #include <pixels/pixeltest.h>
 #include <pixels/showpixels.h>
