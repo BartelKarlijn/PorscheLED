@@ -22,9 +22,9 @@
 // Vermogen pixelstrip
 #define power_max_volt 5
 #define power_max_mA 700
-#define brightness_stop 120  // voor stoplicht gebruikt, rest = de helft
-#define brightness_main 60   // voor alle ander lichten
-#define brightness_drl 60    // voor drl
+#define brightness_stop 150  // voor stoplicht gebruikt, rest = minder
+#define brightness_main 50   // voor alle ander lichten
+#define brightness_drl 30    // voor drl
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x deze totale pinkertijd
 
@@ -38,7 +38,7 @@ byte mainacht_l[3] ;           // 0=van, 1=tot, 2=num
 byte mainacht_r[3] ;           // 0=van, 1=tot, 2=num
 byte stopachter[3] ;           // 0=van, 1=tot, 2=num
 
-#define pinkvoorfrom_l 2             // Waarbinnen mainrond begint de pinker voor?
+#define pinkvoorfrom_l 4             // Waarbinnen mainrond begint de pinker voor?
 #define pinkvoorfrom_r 4             // Waarbinnen mainrond begint de pinker voor?
 #define pinkvoor_num 2           // aantal leds voor pinker voor
 

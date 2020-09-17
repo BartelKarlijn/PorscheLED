@@ -14,7 +14,15 @@ void pixelstop() {
         // Enkel als dimlicht uit staat
         setcolor(mainacht_l, CRGB::Black, brightness_stop);
         setcolor(mainacht_r, CRGB::Black, brightness_stop);
-    }
+      }
+      else
+      {
+        // dimlicht staat aan
+        setcolor(mainacht_l, CRGB::Red, brightness_main);
+        setcolor(mainacht_r, CRGB::Red, brightness_main);
+      }
+      
+      dim_statusold = not(dim_status);
       printdebug("stop status = af");
     }
   }

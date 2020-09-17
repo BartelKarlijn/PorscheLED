@@ -1,7 +1,7 @@
 void pixeldim() {
-  if (dim_status !=dim_statusold) {
+  if ( (dim_status !=dim_statusold) or (left_status != left_statusold) or (righ_status != righ_statusold) or (stop_status != stop_statusold)) {
     dim_statusold = dim_status;
-    // only when changed
+    // only when changed or when pinker changed
     if(dim_status) {
       setcolor(mainrond_l, CRGB::White, brightness_main);
       setcolor(mainrond_r, CRGB::White, brightness_main);
@@ -16,6 +16,11 @@ void pixeldim() {
         // enkel als geen stoplicht
         setcolor(mainacht_l, CRGB::Black, brightness_main);
         setcolor(mainacht_r, CRGB::Black, brightness_main);
+      }
+      else {
+        // stoplicht aan
+        setcolor(mainacht_l, CRGB::Red, brightness_stop);
+        setcolor(mainacht_r, CRGB::Red, brightness_stop);
       }
       printdebug("dim status = af");
     }
