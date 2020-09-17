@@ -8,8 +8,8 @@ void sweep_aan(){
   nextled = nextled + 1;
           
   //pinkers nu aan
-  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::OrangeRed); }  //wel eerst checken of pinker aan die kant aan staat
-  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::OrangeRed); }  // anders laten we gewoon dim staan
+  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::Orange); }  //wel eerst checken of pinker aan die kant aan staat
+  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::Orange); }  // anders laten we gewoon dim staan
 }
 
 void pixelpinkersweep() {
