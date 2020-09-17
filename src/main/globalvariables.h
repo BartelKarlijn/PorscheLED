@@ -43,3 +43,5 @@ byte nextled;
 byte pinkerstuk_l[3];  // 0=van, 1=tot, 2=num
 byte pinkerstuk_r[3];  // 0=van, 1=tot, 2=num
 
+byte pinkvoor_l[3] ;           // 0=van, 1=tot, 2=num
+byte pinkvoor_r[3] ;           // 0=van, 1=tot, 2=num

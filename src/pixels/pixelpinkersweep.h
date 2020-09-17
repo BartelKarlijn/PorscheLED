@@ -1,4 +1,4 @@
-void sweepachter_aan(){
+void sweep_aan(){
   pinkerstuk_l[0] = mainacht_l[0] ;
   pinkerstuk_r[0] = mainacht_r[1] - nextled ;
   pinkerstuk_l[1] = mainacht_l[0] + nextled ;
@@ -8,21 +8,15 @@ void sweepachter_aan(){
   nextled = nextled + 1;
           
   //pinkers nu aan
-  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::Orange, brightness_drl); }  //wel eerst checken of pinker aan die kant aan staat
-  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::Orange, brightness_drl); }  // anders laten we gewoon dim staan
-}
-
-void pinkvooraan() {
-  pinkerstuk_l[0] = mainrond_l[0] + pinkvoor_L ;
-  pinkerstuk_l[1] = mainrond_l[0] + pinkvoor_L + pinkvoor_num -1;
-  pinkerstuk_l[2] = pinkvoor_num ;
-
-  pinkerstuk_r[0] = mainrond_r[0] + pinkvoor_R ;
-  pinkerstuk_r[1] = mainrond_r[0] + pinkvoor_R + pinkvoor_num -1;
-  pinkerstuk_r[2] = pinkvoor_num ;
-
-  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::OrangeRed, brightness_drl); }  //wel eerst checken of pinker aan die kant aan staat
-  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::OrangeRed, brightness_drl); }  // anders laten we gewoon dim staan
+  if ( left_status ) { 
+    //wel eerst checken of pinker aan die kant aan staat, anders laten we gewoon dim staan
+    setcolor(pinkerstuk_l, CRGB::Orange, brightness_main); 
+    setcolor(pinkvoor_l, CRGB::OrangeRed, brightness_main);
+    }  
+  if ( righ_status ) { 
+    //wel eerst checken of pinker aan die kant aan staat, anders laten we gewoon dim staan
+    setcolor(pinkerstuk_r, CRGB::Orange, brightness_main); }
+    setcolor(pinkvoor_r, CRGB::OrangeRed, brightness_main);
 }
 
 void pixelpinkersweep() {
@@ -39,19 +33,25 @@ void pixelpinkersweep() {
         nextled = 0;    // bij begin van een sequentie is volgend lichtje het eerste
         if (pinkerstatus) {
           millis_next_led   = millis_current + pinkerledmillis ;
-          sweepachter_aan();
-          pinkvooraan();
+          sweep_aan();
         }
         else {
           millis_next_led   = millis_current + mainacht_num * pinkerledmillis ;
           // pinkers nu uit: alles uit
-          if ( left_status ) { setcolor(mainacht_l, CRGB::Black, brightness_drl); }
-          if ( righ_status ) { setcolor(mainacht_r, CRGB::Black, brightness_drl); }
+          if ( left_status ) { 
+            setcolor(mainacht_l, CRGB::Black, brightness_main); 
+            setcolor(pinkvoor_l, CRGB::Black, brightness_main); 
+            }
+          if ( righ_status ) { 
+            setcolor(mainacht_r, CRGB::Black, brightness_main); 
+            setcolor(pinkvoor_r, CRGB::Black, brightness_main); 
+            }
         }        
       }
       else {
+        // geen nieuwe sekwentie, gewoon een nieuw ledje er bij
         statuschanged = true;
-        sweepachter_aan();
+        sweep_aan();
       }
       millis_next_led = millis_next_led + pinkerledmillis ;
     }
@@ -62,6 +62,7 @@ void pixelpinkersweep() {
     printdebug("dimstatus=" + (String) dim_status);
     left_statusold = left_status;
     righ_statusold = righ_status;
+    statuschanged = true;
     dim_statusold = not(dim_status);   // Zorg dat we weer gewone dimlichten hebben
   }
 }

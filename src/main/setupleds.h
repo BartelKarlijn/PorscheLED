@@ -36,13 +36,23 @@ void setupleds() {
   *pointer9v = *pointer8t + 1;
   *pointer9t = *pointer9v + *pointer9n - 1;
 
-  printdebug( "drl_voor van l" + (String) drl_voor_l[0] + " tot " + (String) drl_voor_l[0] );
-  printdebug( "drl_voor van r" + (String) drl_voor_r[0] + " tot " + (String) drl_voor_r[0] );
-  printdebug( "drl_acht van l" + (String) drl_voor_l[0] + " tot " + (String) drl_acht_l[0] );
-  printdebug( "drl_acht van r" + (String) drl_acht_r[0] + " tot " + (String) drl_acht_r[0] );
-  printdebug( "mainrond van l" + (String) mainrond_l[0] + " tot " + (String) mainrond_l[0] );
-  printdebug( "mainrond van r" + (String) mainrond_r[0] + " tot " + (String) mainrond_r[0] );
-  printdebug( "mainacht van l" + (String) mainacht_l[0] + " tot " + (String) mainacht_l[0] );
-  printdebug( "mainacht van r" + (String) mainacht_r[0] + " tot " + (String) mainacht_r[0] );
-  printdebug( "stopachter van" + (String) stopachter[0] + " tot " + (String) stopachter[0] );
-}
+  pinkvoor_l[0] = mainrond_l[0] + pinkvoorfrom_l ;
+  pinkvoor_l[1] = mainrond_l[0] + pinkvoorfrom_l + pinkvoor_num -1;
+  pinkvoor_l[2] = pinkvoor_num ;
+
+  pinkvoor_r[0] = mainrond_r[0] + pinkvoorfrom_r ;
+  pinkvoor_r[1] = mainrond_r[0] + pinkvoorfrom_r + pinkvoor_num -1;
+  pinkvoor_r[2] = pinkvoor_num ;
+
+  printdebug( "drl_voor van l " + (String) drl_voor_l[0] + " tot " + (String) drl_voor_l[1] );
+  printdebug( "drl_voor van r " + (String) drl_voor_r[0] + " tot " + (String) drl_voor_r[1] );
+  printdebug( "drl_acht van l " + (String) drl_acht_l[0] + " tot " + (String) drl_acht_l[1] );
+  printdebug( "drl_acht van r " + (String) drl_acht_r[0] + " tot " + (String) drl_acht_r[1] );
+  printdebug( "mainrond van l " + (String) mainrond_l[0] + " tot " + (String) mainrond_l[1] );
+  printdebug( "mainrond van r " + (String) mainrond_r[0] + " tot " + (String) mainrond_r[1] );
+  printdebug( "mainacht van l " + (String) mainacht_l[0] + " tot " + (String) mainacht_l[1] );
+  printdebug( "mainacht van r " + (String) mainacht_r[0] + " tot " + (String) mainacht_r[1] );
+  printdebug( "stopachter van " + (String) stopachter[0] + " tot " + (String) stopachter[1] );
+  printdebug( "pink_voorvan l " + (String) pinkvoor_l[0] + " tot " + (String) pinkvoor_l[1] );
+  printdebug( "pink_voorvan r " + (String) pinkvoor_r[0] + " tot " + (String) pinkvoor_r[1] );
+ }
