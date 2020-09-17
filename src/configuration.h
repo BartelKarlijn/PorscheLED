@@ -22,7 +22,9 @@
 // Vermogen pixelstrip
 #define power_max_volt 5
 #define power_max_mA 700
-#define maxbrightness 60
+#define brightness_stop 120  // voor stoplicht gebruikt, rest = de helft
+#define brightness_main 60   // voor alle ander lichten
+#define brightness_drl 60    // voor drl
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x deze totale pinkertijd
 

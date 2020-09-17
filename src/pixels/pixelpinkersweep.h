@@ -8,8 +8,8 @@ void sweep_aan(){
   nextled = nextled + 1;
           
   //pinkers nu aan
-  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::Orange); }  //wel eerst checken of pinker aan die kant aan staat
-  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::Orange); }  // anders laten we gewoon dim staan
+  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::Orange, brightness_drl); }  //wel eerst checken of pinker aan die kant aan staat
+  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::Orange, brightness_drl); }  // anders laten we gewoon dim staan
 }
 
 void pixelpinkersweep() {
@@ -31,8 +31,8 @@ void pixelpinkersweep() {
         else {
           millis_next_led   = millis_current + mainacht_num * pinkerledmillis ;
           // pinkers nu uit: alles uit
-          if ( left_status ) { setcolor(mainacht_l, CRGB::Black); }
-          if ( righ_status ) { setcolor(mainacht_r, CRGB::Black); }
+          if ( left_status ) { setcolor(mainacht_l, CRGB::Black, brightness_drl); }
+          if ( righ_status ) { setcolor(mainacht_r, CRGB::Black, brightness_drl); }
         }        
       }
       else {

@@ -10,8 +10,6 @@ void setuppins() {
   FastLED.addLeds<NEOPIXEL, PINLED>(leds, NUMPIXELS); 
   // set all LEDs to black
   FastLED.clear();
-  //fill_solid(leds, NUM_LEDS, color);
-  FastLED.setBrightness(maxbrightness);
 
   // limit my draw to 1A at 5v of power draw
   FastLED.setMaxPowerInVoltsAndMilliamps(power_max_volt,power_max_mA); 
