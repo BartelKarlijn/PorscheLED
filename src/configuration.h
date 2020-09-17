@@ -38,6 +38,10 @@ byte mainacht_l[3] ;           // 0=van, 1=tot, 2=num
 byte mainacht_r[3] ;           // 0=van, 1=tot, 2=num
 byte stopachter[3] ;           // 0=van, 1=tot, 2=num
 
+#define pinkvoor_L 2             // Waarbinnen mainrond begint de pinker voor?
+#define pinkvoor_R 2             // Waarbinnen mainrond begint de pinker voor?
+#define pinkvoor_num 2           // aantal leds voor pinker voor
+
 // pointers om volgorde aan te geven.  pointer1 = 1e stuk vd led strip
 // helaas weet ik niet hoe je naar array pointers kan wijzen
 byte *pointer1v = &mainrond_l[0];

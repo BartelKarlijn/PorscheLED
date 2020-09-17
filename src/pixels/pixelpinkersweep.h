@@ -1,4 +1,4 @@
-void sweep_aan(){
+void sweepachter_aan(){
   pinkerstuk_l[0] = mainacht_l[0] ;
   pinkerstuk_r[0] = mainacht_r[1] - nextled ;
   pinkerstuk_l[1] = mainacht_l[0] + nextled ;
@@ -10,6 +10,19 @@ void sweep_aan(){
   //pinkers nu aan
   if ( left_status ) { setcolor(pinkerstuk_l, CRGB::Orange, brightness_drl); }  //wel eerst checken of pinker aan die kant aan staat
   if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::Orange, brightness_drl); }  // anders laten we gewoon dim staan
+}
+
+void pinkvooraan() {
+  pinkerstuk_l[0] = mainrond_l[0] + pinkvoor_L ;
+  pinkerstuk_l[1] = mainrond_l[0] + pinkvoor_L + pinkvoor_num -1;
+  pinkerstuk_l[2] = pinkvoor_num ;
+
+  pinkerstuk_r[0] = mainrond_r[0] + pinkvoor_R ;
+  pinkerstuk_r[1] = mainrond_r[0] + pinkvoor_R + pinkvoor_num -1;
+  pinkerstuk_r[2] = pinkvoor_num ;
+
+  if ( left_status ) { setcolor(pinkerstuk_l, CRGB::OrangeRed, brightness_drl); }  //wel eerst checken of pinker aan die kant aan staat
+  if ( righ_status ) { setcolor(pinkerstuk_r, CRGB::OrangeRed, brightness_drl); }  // anders laten we gewoon dim staan
 }
 
 void pixelpinkersweep() {
@@ -26,7 +39,8 @@ void pixelpinkersweep() {
         nextled = 0;    // bij begin van een sequentie is volgend lichtje het eerste
         if (pinkerstatus) {
           millis_next_led   = millis_current + pinkerledmillis ;
-          sweep_aan();
+          sweepachter_aan();
+          pinkvooraan();
         }
         else {
           millis_next_led   = millis_current + mainacht_num * pinkerledmillis ;
@@ -37,7 +51,7 @@ void pixelpinkersweep() {
       }
       else {
         statuschanged = true;
-        sweep_aan();
+        sweepachter_aan();
       }
       millis_next_led = millis_next_led + pinkerledmillis ;
     }
