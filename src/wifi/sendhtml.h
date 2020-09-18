@@ -32,6 +32,6 @@ String SendHTML(){
 
   ptr +="</body>\n";
   ptr +="</html>\n";
-  printdebug(ptr);
+  //printdebug(ptr);
   return ptr;
 }
