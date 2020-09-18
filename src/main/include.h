@@ -19,7 +19,9 @@
 #include <wifi/handle.h>
 #include <wifi/setupwifi.h>
 #include <pixels/setcolor.h>
+#include <pixels/pixelneon.h>
 #include <pixels/pixeldrl.h>
+#include <pixels/pixeldimlicht.h>
 #include <pixels/pixeldim.h>
 #include <pixels/pixelstop.h>
 #include <pixels/pixelpinkersweep.h>

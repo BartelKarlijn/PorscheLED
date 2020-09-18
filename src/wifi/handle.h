@@ -4,6 +4,11 @@ void handle_OnConnect() {
   statuschanged = true;
   server.send(200, "text/html", SendHTML()); 
 }
+void handle_neon() {
+  printdebug("handle_neon");
+  neon_status = not(neon_status);
+  server.send(200, "text/html", SendHTML()); 
+}
 void handle_drl() {
   printdebug("handle_drl");
   drl_status = not(drl_status);

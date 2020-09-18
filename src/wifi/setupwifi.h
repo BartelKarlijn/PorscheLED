@@ -6,6 +6,7 @@ void setupwifi() {
   delay(100);
 
   server.on("/",        handle_OnConnect);
+  server.on("/butneon", handle_neon);
   server.on("/butdrl",  handle_drl);
   server.on("/butdim",  handle_dim);
   server.on("/butstop", handle_stop);

@@ -3,7 +3,6 @@ void setuppins() {
   printdebug("Setup Begonnen, nu de rest nog"); 
 
   pinMode(PINNEON, OUTPUT);
-  neonOnOff = false;
 
   // Define the array of leds
   printdebug("Aantal pixels = " + (String) NUMPIXELS);

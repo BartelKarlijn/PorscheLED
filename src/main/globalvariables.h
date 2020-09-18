@@ -1,10 +1,14 @@
 // Hoeveel pixels in de strip?
 #define NUMPIXELS      ( 2 * ( drl_voor_num + drl_acht_num + mainrond_num + mainacht_num ) + stopacht_num )
 
-bool neonOnOff ;
 bool statuschanged = false;
 
-// voor webpagina
+// voor webpagina knoppen & bediening
+bool neon_status = false;
+bool neon_statusold = false;
+#define neon_oms  "Contour"
+#define neon_handle "butneon"
+
 bool drl_status = false;
 bool drl_statusold = false;
 #define drl_oms  "Dagrijlicht"

@@ -11,6 +11,7 @@ void setup() {
 
 void loop() {
   server.handleClient();
+  pixelneon();
   pixeldrl();
   pixeldim();
   pixelstop();
