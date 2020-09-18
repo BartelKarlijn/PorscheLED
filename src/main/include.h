@@ -21,10 +21,10 @@
 #include <pixels/setcolor.h>
 #include <pixels/pixelneon.h>
 #include <pixels/pixeldrl.h>
-#include <pixels/pixeldimlicht.h>
-#include <pixels/pixeldim.h>
-#include <pixels/pixelstop.h>
-#include <pixels/pixelpinkersweep.h>
+#include <pixels/pixelprocessdim.h>
+//#include <pixels/pixeldim.h>
+//#include <pixels/pixelstop.h>
+//#include <pixels/pixelpinkersweep.h>
 #include <pixels/pixeltest.h>
 #include <pixels/showpixels.h>
 #include <main/setuppins.h>

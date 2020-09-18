@@ -20,9 +20,53 @@ void sweep_aan(){
   }
 }
 
-void pixeldimlicht() {
-  bool dim_action;
-  dim_action = (left_status or righ_status) 
+void pixelprocessdim() {
+  // Overlopen mogelijkheden: later kan Pinker deze overschrijven
+  if ( (dim_status !=dim_statusold) or (stop_status != stop_statusold) or (left_status != left_statusold) or (righ_status != righ_statusold) ) {
+    // old waarden correct zetten
+    dim_statusold  = dim_status;
+    stop_statusold = stop_status;
+    left_statusold = left_status;
+    righ_statusold = righ_status;
+    statuschanged = true; 
+    // Bij wijziging, overlopen we de mogelijheden:
+    // 0. dim uit stop uit  => dim voor uit,  dim achter uit,  stop uit
+    // 1. dim aan stop uit  => dim voor aan,  dim achter aan,  stop uit
+    // 2. dim uit stop aan  => dim voor uit,  dim achter fel,  stop fel
+    // 3. dim aan stop aan  => dim voor aan,  dim achter fel,  stop fel
+    if (dim_status and stop_status) {
+      // case 3
+      setcolor(mainrond_l, CRGB::White, brightness_main);
+      setcolor(mainrond_r, CRGB::White, brightness_main);
+      setcolor(mainacht_l, CRGB::Red  , brightness_stop);
+      setcolor(mainacht_r, CRGB::Red  , brightness_stop);
+      setcolor(stopachter, CRGB::Red  , brightness_stop);
+    }
+    else if (dim_status) {
+      // case 1
+      setcolor(mainrond_l, CRGB::White, brightness_main);
+      setcolor(mainrond_r, CRGB::White, brightness_main);
+      setcolor(mainacht_l, CRGB::Red  , brightness_main);
+      setcolor(mainacht_r, CRGB::Red  , brightness_main);
+      setcolor(stopachter, CRGB::Black, brightness_stop);
+    }
+    else if (stop_status) {
+      // case 2
+      setcolor(mainrond_l, CRGB::Black, brightness_main);
+      setcolor(mainrond_r, CRGB::Black, brightness_main);
+      setcolor(mainacht_l, CRGB::Red  , brightness_stop);
+      setcolor(mainacht_r, CRGB::Red  , brightness_stop);
+      setcolor(stopachter, CRGB::Red  , brightness_stop);
+    }
+    else {
+      // case 0
+      setcolor(mainrond_l, CRGB::Black, brightness_main);
+      setcolor(mainrond_r, CRGB::Black, brightness_main);
+      setcolor(mainacht_l, CRGB::Black, brightness_main);
+      setcolor(mainacht_r, CRGB::Black, brightness_main);
+      setcolor(stopachter, CRGB::Black, brightness_stop);
+    }
+  }
 
   if (left_status or righ_status) {
     // pinkers moet altijd doorlopen worden als er eentje aan staat
@@ -59,14 +103,5 @@ void pixeldimlicht() {
       }
       millis_next_led = millis_next_led + pinkerledmillis ;
     }
-  }
-  if ( (left_status != left_statusold) or (righ_status != righ_statusold) ) {
-    // Als er wijziging in pinkers is: terug naar gewone dim
-    printdebug("left_status=" + (String) left_status + " righ_status=" + (String) righ_status);
-    printdebug("dimstatus=" + (String) dim_status);
-    left_statusold = left_status;
-    righ_statusold = righ_status;
-    statuschanged = true;
-    dim_statusold = not(dim_status);   // Zorg dat we weer gewone dimlichten hebben
   }
 }

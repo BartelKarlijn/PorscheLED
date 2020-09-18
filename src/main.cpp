@@ -13,9 +13,10 @@ void loop() {
   server.handleClient();
   pixelneon();
   pixeldrl();
-  pixeldim();
-  pixelstop();
-  pixelpinkersweep();
+  pixelprocessdim();
+  //pixeldim();
+  //pixelstop();
+  //pixelpinkersweep();
   pixeltest();
   showpixels();
 }
