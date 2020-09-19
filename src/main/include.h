@@ -21,6 +21,7 @@
 #include <pixels/setcolor.h>
 #include <pixels/pixelneon.h>
 #include <pixels/pixeldrl.h>
+#include <pixels/pixelsweep.h>
 #include <pixels/pixelprocessdim.h>
 //#include <pixels/pixeldim.h>
 //#include <pixels/pixelstop.h>
