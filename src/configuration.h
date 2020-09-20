@@ -5,7 +5,7 @@
 
 
 // Debug
-#define debugmode  true
+#define debugmode  false
 #define serialspeed 115200
 
 // PinDefinitions
