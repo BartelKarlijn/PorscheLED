@@ -14,35 +14,35 @@ void pixelprocessdim() {
     // 3. dim aan stop aan  => dim voor aan,  dim achter fel,  stop fel
     if (dim_status and stop_status) {
       // case 3
-      setcolor(mainrond_l, CRGB::White, brightness_main);
-      setcolor(mainrond_r, CRGB::White, brightness_main);
-      setcolor(mainacht_l, CRGB::Red  , brightness_stop);
-      setcolor(mainacht_r, CRGB::Red  , brightness_stop);
-      setcolor(stopachter, CRGB::Red  , brightness_stop);
+      setcolor(mainrond_l, CRGB::White, fade_main);
+      setcolor(mainrond_r, CRGB::White, fade_main);
+      setcolor(mainacht_l, CRGB::Red  , fade_stop);
+      setcolor(mainacht_r, CRGB::Red  , fade_stop);
+      setcolor(stopachter, CRGB::Red  , fade_stop);
     }
     else if (dim_status) {
       // case 1
-      setcolor(mainrond_l, CRGB::White, brightness_main);
-      setcolor(mainrond_r, CRGB::White, brightness_main);
-      setcolor(mainacht_l, CRGB::Red  , brightness_main);
-      setcolor(mainacht_r, CRGB::Red  , brightness_main);
-      setcolor(stopachter, CRGB::Black, brightness_stop);
+      setcolor(mainrond_l, CRGB::White, fade_main);
+      setcolor(mainrond_r, CRGB::White, fade_main);
+      setcolor(mainacht_l, CRGB::Red  , fade_main);
+      setcolor(mainacht_r, CRGB::Red  , fade_main);
+      setcolor(stopachter, CRGB::Black, fade_stop);
     }
     else if (stop_status) {
       // case 2
-      setcolor(mainrond_l, CRGB::Black, brightness_main);
-      setcolor(mainrond_r, CRGB::Black, brightness_main);
-      setcolor(mainacht_l, CRGB::Red  , brightness_stop);
-      setcolor(mainacht_r, CRGB::Red  , brightness_stop);
-      setcolor(stopachter, CRGB::Red  , brightness_stop);
+      setcolor(mainrond_l, CRGB::Black, fade_main);
+      setcolor(mainrond_r, CRGB::Black, fade_main);
+      setcolor(mainacht_l, CRGB::Red  , fade_stop);
+      setcolor(mainacht_r, CRGB::Red  , fade_stop);
+      setcolor(stopachter, CRGB::Red  , fade_stop);
     }
     else {
       // case 0
-      setcolor(mainrond_l, CRGB::Black, brightness_main);
-      setcolor(mainrond_r, CRGB::Black, brightness_main);
-      setcolor(mainacht_l, CRGB::Black, brightness_main);
-      setcolor(mainacht_r, CRGB::Black, brightness_main);
-      setcolor(stopachter, CRGB::Black, brightness_stop);
+      setcolor(mainrond_l, CRGB::Black, fade_main);
+      setcolor(mainrond_r, CRGB::Black, fade_main);
+      setcolor(mainacht_l, CRGB::Black, fade_main);
+      setcolor(mainacht_r, CRGB::Black, fade_main);
+      setcolor(stopachter, CRGB::Black, fade_stop);
     }
   }
 
@@ -66,12 +66,12 @@ void pixelprocessdim() {
           millis_next_led   = millis_current + mainacht_num * pinkerledmillis ;
           // pinkers nu uit: alles uit, ook voorlichten
           if ( left_status ) { 
-            setcolor(pinkvoor_l, CRGB::Black, brightness_main);
-            setcolor(mainacht_l, CRGB::Black, brightness_main);
+            setcolor(pinkvoor_l, CRGB::Black, fade_main);
+            setcolor(mainacht_l, CRGB::Black, fade_main);
             }
           if ( righ_status ) { 
-            setcolor(pinkvoor_r, CRGB::Black, brightness_main);
-            setcolor(mainacht_r, CRGB::Black, brightness_main);
+            setcolor(pinkvoor_r, CRGB::Black, fade_main);
+            setcolor(mainacht_r, CRGB::Black, fade_main);
             }
         }        
       }

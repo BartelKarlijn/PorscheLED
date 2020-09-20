@@ -9,6 +9,7 @@ void setuppins() {
   // Define the array of leds
   printdebug("Aantal pixels = " + (String) NUMPIXELS);
   FastLED.addLeds<NEOPIXEL, PINLED>(leds, NUMPIXELS); 
+  FastLED.setBrightness(max_brightness);
   // set all LEDs to black
   FastLED.clear();
 

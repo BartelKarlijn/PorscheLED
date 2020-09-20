@@ -5,7 +5,7 @@
 
 
 // Debug
-#define debugmode  false
+#define debugmode  true
 #define serialspeed 115200
 
 // PinDefinitions
@@ -21,10 +21,11 @@
 
 // Vermogen pixelstrip
 #define power_max_volt 5
-#define power_max_mA 700
-#define brightness_stop 150  // voor stoplicht gebruikt, rest = minder
-#define brightness_main 50   // voor alle ander lichten
-#define brightness_drl 30    // voor drl
+#define power_max_mA 600
+#define max_brightness 100
+#define fade_stop   0  // voor stoplicht gebruikt, rest = minder
+#define fade_main 180  // voor alle ander lichten
+#define fade_drl  220  // voor drl
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x deze totale pinkertijd
 

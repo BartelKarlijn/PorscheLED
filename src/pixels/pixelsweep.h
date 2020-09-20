@@ -11,14 +11,14 @@ void pixelsweep(){
   if ( left_status ) { 
     //wel eerst checken of pinker aan die kant aan staat, anders laten we gewoon dim staan
     // alle achterlichten uit zetten om vreemde overgangen te vermijden
-    setcolor(mainacht_l,   CRGB::Black, brightness_main);
-    setcolor(pinkerstuk_l, CRGB::Orange, brightness_main);
-    setcolor(pinkvoor_l, CRGB::OrangeRed, brightness_main);
+    setcolor(mainacht_l,   CRGB::Black, fade_main);
+    setcolor(pinkerstuk_l, CRGB::Orange, fade_main);
+    setcolor(pinkvoor_l, CRGB::OrangeRed, fade_main);
   }
   if ( righ_status ) { 
     //wel eerst checken of pinker aan die kant aan staat, anders laten we gewoon dim staan
-    setcolor(mainacht_r,   CRGB::Black, brightness_main);
-    setcolor(pinkerstuk_r, CRGB::Orange, brightness_main); 
-    setcolor(pinkvoor_r, CRGB::OrangeRed, brightness_main);
+    setcolor(mainacht_r,   CRGB::Black, fade_main);
+    setcolor(pinkerstuk_r, CRGB::Orange, fade_main); 
+    setcolor(pinkvoor_r, CRGB::OrangeRed, fade_main);
   }
 }
