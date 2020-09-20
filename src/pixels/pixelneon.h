@@ -3,11 +3,11 @@ void pixelneon() {
     neon_statusold = neon_status;
     // only when changed
     if(neon_status) {
-      digitalWrite(PINNEON, HIGH);
+      digitalWrite(PINNEON, LOW);
       printdebug("neon status = aan");
     } 
     else {
-      digitalWrite(PINNEON, LOW);
+      digitalWrite(PINNEON, HIGH);
       printdebug("neon status = af");
     }
   }

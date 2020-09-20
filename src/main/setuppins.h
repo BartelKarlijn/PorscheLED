@@ -2,7 +2,9 @@ void setuppins() {
   Serial.begin(serialspeed); 
   printdebug("Setup Begonnen, nu de rest nog"); 
 
+  // neon licht uitzetten.  Logica is omgekeerd
   pinMode(PINNEON, OUTPUT);
+  digitalWrite(PINNEON, HIGH);
 
   // Define the array of leds
   printdebug("Aantal pixels = " + (String) NUMPIXELS);
