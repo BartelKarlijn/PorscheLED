@@ -23,9 +23,9 @@
 #define power_max_volt 5
 #define power_max_mA 600
 #define max_brightness 100
-#define fade_stop   0  // voor stoplicht gebruikt, rest = minder
-#define fade_main 180  // voor alle ander lichten
-#define fade_drl  220  // voor drl
+#define fade_stop 100  // voor stoplicht gebruikt, rest = minder
+#define fade_main 220  // voor alle ander lichten
+#define fade_drl  250  // voor drl
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x deze totale pinkertijd
 
