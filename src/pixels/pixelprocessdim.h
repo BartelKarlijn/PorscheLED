@@ -60,26 +60,34 @@ void pixelprocessdim() {
        
         if (pinkerstatus) {
           millis_next_led   = millis_current + pinkerledmillis ;
-          pixelsweep();
+          pixelsweep(nextled);
+          nextled = nextled +1;
         }
         else {
           millis_next_led   = millis_current + mainacht_num * pinkerledmillis ;
           // pinkers nu uit: alles uit, ook voorlichten
           if ( left_status ) { 
-            setcolor(pinkvoor_l, CRGB::Black, fade_main);
+            setcolor(pinkvoor_l, CRGB::Black, fade_pink);
             setcolor(mainacht_l, CRGB::Black, fade_main);
             }
           if ( righ_status ) { 
-            setcolor(pinkvoor_r, CRGB::Black, fade_main);
+            setcolor(pinkvoor_r, CRGB::Black, fade_pink);
             setcolor(mainacht_r, CRGB::Black, fade_main);
             }
         }        
       }
       else {
         // geen nieuwe sekwentie, gewoon een nieuw ledje er bij
-        pixelsweep();
+        pixelsweep(nextled);
+        nextled = nextled + 1;
       }
       millis_next_led = millis_next_led + pinkerledmillis ;
     }
+    else if (statuschanged)
+    {
+      // als je bv dimlichten hebt aangestoken, maar geen nieuw ledje, dan moet de sekwentie gewoon doorlopen
+      pixelsweep(nextled);
+    }
+    
   }
 }

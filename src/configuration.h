@@ -21,11 +21,12 @@
 
 // Vermogen pixelstrip
 #define power_max_volt 5
-#define power_max_mA 600
-#define max_brightness 100
-#define fade_stop 100  // voor stoplicht gebruikt, rest = minder
-#define fade_main 220  // voor alle ander lichten
-#define fade_drl  250  // voor drl
+#define power_max_mA 500
+#define max_brightness 40
+#define fade_stop   0  // voor stoplicht gebruikt, rest = minder
+#define fade_main 150  // voor alle ander lichten
+#define fade_drl  200  // voor drl
+#define fade_pink   0  // voor 2 kleine pinkers vooraan
 
 #define pinkerledmillis 100 // om de x msec een nieuw ledje.  Aftijd is n leds x deze totale pinkertijd
 
